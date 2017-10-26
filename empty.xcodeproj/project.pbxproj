@@ -1,0 +1,60 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+		992C56991FA01CBA00134260 = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+
+		992C569A1FA01CBA00134260 = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+			};
+			buildConfigurationList = 992C569D1FA01CBA00134260;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 992C56991FA01CBA00134260;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+
+		992C569E1FA01CBA00134260 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+
+		992C569F1FA01CBA00134260 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+
+		992C569D1FA01CBA00134260 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992C569E1FA01CBA00134260,
+				992C569F1FA01CBA00134260,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+	};
+	rootObject = 992C569A1FA01CBA00134260;
+}
