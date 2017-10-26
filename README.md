@@ -1,4 +1,4 @@
-Build iOS Apps For With IB
+Build iOS Apps With IB
 ==========================
 
 Building ios apps is a piece of cake as long as you know the correct compiler flags. This project does not require a you to buy a developer account, but you still need to log into xcode if you want to run it. Apple forces developers to code sign bundles as it is is part of their plan to rule the entire world. Fortunately they do not require developers to build using the IDE. We can get around the code signing and packaging by adding a "Copy Files" build phase, which signs and copies executable built by ib.
