@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		990E521E1FA177E0009CAC3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 990E521D1FA177E0009CAC3B /* Assets.xcassets */; };
+		990E522E1FA1822A009CAC3B /* built-with-ib in Copy Files */ = {isa = PBXBuildFile; fileRef = 990E522C1FA1820B009CAC3B /* built-with-ib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		990E522A1FA17CC1009CAC3B /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				990E522E1FA1822A009CAC3B /* built-with-ib in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		990E52111FA177E0009CAC3B /* built-with-ib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "built-with-ib.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990E521D1FA177E0009CAC3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		990E52221FA177E0009CAC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		990E522C1FA1820B009CAC3B /* built-with-ib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "built-with-ib"; path = "../out/debug/src/built-with-ib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +56,7 @@
 			children = (
 				990E521D1FA177E0009CAC3B /* Assets.xcassets */,
 				990E52221FA177E0009CAC3B /* Info.plist */,
+				990E522C1FA1820B009CAC3B /* built-with-ib */,
 				990E52121FA177E0009CAC3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +71,7 @@
 				990E520D1FA177E0009CAC3B /* Sources */,
 				990E520E1FA177E0009CAC3B /* Frameworks */,
 				990E520F1FA177E0009CAC3B /* Resources */,
+				990E522A1FA17CC1009CAC3B /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -149,6 +167,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -169,13 +188,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "built-with-ib/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "testing.built-with-ib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -212,6 +232,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -226,12 +247,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "built-with-ib/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "testing.built-with-ib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
