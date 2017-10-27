@@ -32,3 +32,7 @@ You might get a build error saying you need to select a team for codesigning. To
 ## Build and Run Script
 
 `./build-and-run.sh` will build and deploy to an ios simulator and log standard output.
+
+## security unlock-keychain
+
+You might need to execute `security unlock-keychain` to allow users logged in through ssh to use code sign key
