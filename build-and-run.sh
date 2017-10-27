@@ -32,4 +32,5 @@ if [ -z "$HAS_BOOTED_SIM" ]; then
 fi
 
 xcrun simctl install booted build/Debug-iphonesimulator/iphone_simulator.app
+open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
 xcrun simctl launch --console booted testing.built-with-ib
