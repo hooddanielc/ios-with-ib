@@ -4,6 +4,24 @@
 #include <GLKit/GLKit.h>
 #include <QuartzCore/QuartzCore.h>
 
+template <typename T>
+class testing_templates_t {
+
+public:
+
+  T *prop;
+
+  testing_templates_t(T *prop_): prop(prop_) {}
+
+  ~testing_templates_t() {
+    std::cout << "Destructor called" << std::endl;
+  }
+
+  void no_way() {
+    std::cout << "THE WIDTH HERE IS " << prop.frame.size.width << std::endl;
+  }
+};
+
 @interface MainWindow : UIWindow
 @end
 
@@ -23,6 +41,7 @@
 @implementation AppDelegate{
   float red_value;
   BOOL is_increasing;
+  testing_templates_t<MainWindow> *weird;
 }
 
 - (void) render:(CADisplayLink*) displayLink {
@@ -34,7 +53,11 @@
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
   #pragma unused(launchOptions)
   #pragma unused(application)
+
   self.window = [[MainWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+  weird = new testing_templates_t<MainWindow>(self.window);
+  weird->no_way();
+
   is_increasing = YES;
   red_value = 0.0;
 
@@ -101,6 +124,7 @@
 
 - (void) applicationWillTerminate: (UIApplication *) application {
   #pragma unused(application)
+  delete weird;
 }
 @end
 
