@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99C3EEE01FA1B48F00848019 /* main in Resources */ = {isa = PBXBuildFile; fileRef = 99C3EEDF1FA1B48F00848019 /* main */; };
-		99C3EEE51FA1B51D00848019 /* main in Resources */ = {isa = PBXBuildFile; fileRef = 99C3EEE41FA1B51D00848019 /* main */; };
+		992315C11FA2FCDA00729533 /* main in Resources */ = {isa = PBXBuildFile; fileRef = 992315C01FA2FCD900729533 /* main */; };
+		992775191FA2BC6A006A1277 /* main in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99C3EEE41FA1B51D00848019 /* main */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		990E52921FA1B1FB009CAC3B /* CopyFiles */ = {
+		992775181FA2BC65006A1277 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				992775191FA2BC6A006A1277 /* main in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,14 +27,14 @@
 /* Begin PBXFileReference section */
 		990E521D1FA177E0009CAC3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		990E52221FA177E0009CAC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		990E525C1FA1AF1E009CAC3B /* iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		992315AA1FA2FC9700729533 /* iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		992315C01FA2FCD900729533 /* main */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = main; path = ../../out/iphone_debug/src/main; sourceTree = "<group>"; };
 		99C3EEC41FA1B35900848019 /* iphone_simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone_simulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		99C3EEDF1FA1B48F00848019 /* main */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = main; path = ../../out/iphone_debug/src/main; sourceTree = "<group>"; };
 		99C3EEE41FA1B51D00848019 /* main */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = main; path = ../../out/iphone_simulator_debug/src/main; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		990E52591FA1AF1E009CAC3B /* Frameworks */ = {
+		992315A71FA2FC9700729533 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,10 +54,18 @@
 		990E52121FA177E0009CAC3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				990E525C1FA1AF1E009CAC3B /* iphone.app */,
 				99C3EEC41FA1B35900848019 /* iphone_simulator.app */,
+				992315AA1FA2FC9700729533 /* iphone.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		992315AB1FA2FC9700729533 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				992315C01FA2FCD900729533 /* main */,
+			);
+			path = iphone;
 			sourceTree = "<group>";
 		};
 		992C56991FA01CBA00134260 = {
@@ -65,17 +74,9 @@
 				990E521D1FA177E0009CAC3B /* Assets.xcassets */,
 				990E52221FA177E0009CAC3B /* Info.plist */,
 				99C3EEE31FA1B4D000848019 /* iphone_simulator */,
-				99C3EEDE1FA1B47600848019 /* iphone */,
+				992315AB1FA2FC9700729533 /* iphone */,
 				990E52121FA177E0009CAC3B /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		99C3EEDE1FA1B47600848019 /* iphone */ = {
-			isa = PBXGroup;
-			children = (
-				99C3EEDF1FA1B48F00848019 /* main */,
-			);
-			path = iphone;
 			sourceTree = "<group>";
 		};
 		99C3EEE31FA1B4D000848019 /* iphone_simulator */ = {
@@ -89,14 +90,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		990E525B1FA1AF1E009CAC3B /* iphone */ = {
+		992315A91FA2FC9700729533 /* iphone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 990E526F1FA1AF1E009CAC3B /* Build configuration list for PBXNativeTarget "iphone" */;
+			buildConfigurationList = 992315BD1FA2FC9700729533 /* Build configuration list for PBXNativeTarget "iphone" */;
 			buildPhases = (
-				990E52581FA1AF1E009CAC3B /* Sources */,
-				990E52591FA1AF1E009CAC3B /* Frameworks */,
-				990E525A1FA1AF1E009CAC3B /* Resources */,
-				990E52921FA1B1FB009CAC3B /* CopyFiles */,
+				992315A61FA2FC9700729533 /* Sources */,
+				992315A71FA2FC9700729533 /* Frameworks */,
+				992315A81FA2FC9700729533 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -104,7 +104,7 @@
 			);
 			name = iphone;
 			productName = iphone;
-			productReference = 990E525C1FA1AF1E009CAC3B /* iphone.app */;
+			productReference = 992315AA1FA2FC9700729533 /* iphone.app */;
 			productType = "com.apple.product-type.application";
 		};
 		99C3EEC31FA1B35900848019 /* iphone_simulator */ = {
@@ -114,6 +114,7 @@
 				99C3EEC01FA1B35900848019 /* Sources */,
 				99C3EEC11FA1B35900848019 /* Frameworks */,
 				99C3EEC21FA1B35900848019 /* Resources */,
+				992775181FA2BC65006A1277 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -132,13 +133,13 @@
 			attributes = {
 				LastUpgradeCheck = 0900;
 				TargetAttributes = {
-					990E525B1FA1AF1E009CAC3B = {
+					992315A91FA2FC9700729533 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					99C3EEC31FA1B35900848019 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -155,18 +156,18 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				990E525B1FA1AF1E009CAC3B /* iphone */,
 				99C3EEC31FA1B35900848019 /* iphone_simulator */,
+				992315A91FA2FC9700729533 /* iphone */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		990E525A1FA1AF1E009CAC3B /* Resources */ = {
+		992315A81FA2FC9700729533 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99C3EEE01FA1B48F00848019 /* main in Resources */,
+				992315C11FA2FCDA00729533 /* main in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,14 +175,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99C3EEE51FA1B51D00848019 /* main in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		990E52581FA1AF1E009CAC3B /* Sources */ = {
+		992315A61FA2FC9700729533 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,7 +198,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		990E52701FA1AF1E009CAC3B /* Debug */ = {
+		992315BE1FA2FC9700729533 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,9 +229,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -248,19 +249,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = iphone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = testing.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		990E52711FA1AF1E009CAC3B /* Release */ = {
+		992315BF1FA2FC9700729533 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -291,9 +292,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -304,12 +306,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = iphone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = testing.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -324,6 +326,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -337,6 +340,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -373,9 +377,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -397,8 +403,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "testing.iphone-simulator";
+				PRODUCT_BUNDLE_IDENTIFIER = "testing.built-with-ib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -435,9 +442,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -452,8 +461,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "testing.iphone-simulator";
+				PRODUCT_BUNDLE_IDENTIFIER = "testing.built-with-ib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -463,14 +473,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		990E526F1FA1AF1E009CAC3B /* Build configuration list for PBXNativeTarget "iphone" */ = {
+		992315BD1FA2FC9700729533 /* Build configuration list for PBXNativeTarget "iphone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				990E52701FA1AF1E009CAC3B /* Debug */,
-				990E52711FA1AF1E009CAC3B /* Release */,
+				992315BE1FA2FC9700729533 /* Debug */,
+				992315BF1FA2FC9700729533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		992C569D1FA01CBA00134260 /* Build configuration list for PBXProject "ios-with-ib" */ = {
 			isa = XCConfigurationList;
@@ -479,7 +489,7 @@
 				992C569F1FA01CBA00134260 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		99C3EED71FA1B35900848019 /* Build configuration list for PBXNativeTarget "iphone_simulator" */ = {
 			isa = XCConfigurationList;
@@ -488,7 +498,7 @@
 				99C3EED91FA1B35900848019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

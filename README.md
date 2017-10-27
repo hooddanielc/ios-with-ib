@@ -27,3 +27,8 @@ You might get a build error saying you need to select a team for codesigning. To
 ## Build from command line
 
 `xcodebuild`
+
+
+## Build and Run Script
+
+`./build-and-run.sh` will build and deploy to an ios simulator and log standard output.
