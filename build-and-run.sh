@@ -1,3 +1,5 @@
+set -e
+
 ib --cfg iphone_simulator_debug src/main
 
 # check if key chain is locked
@@ -10,10 +12,11 @@ if [ $? != 0 ]; then
 fi
 
 # build to out dir
-xcodebuild -target iphone_simulator -configuration Debug -sdk iphonesimulator11.0 clean build
+xcodebuild -target iphone_simulator -configuration Debug -sdk iphonesimulator11.0 build
 
-HAS_BOOTED_SIM=$(xcrun simctl list | grep 'My-iPhone-8' | grep Booted)
-HAS_CREATED_SIM=$(xcrun simctl list | grep 'My-iPhone-8')
+# check if My-iPhone-8 exists or is running
+HAS_BOOTED_SIM=$(xcrun simctl list | grep 'My-iPhone-8' | grep Booted || true)
+HAS_CREATED_SIM=$(xcrun simctl list | grep 'My-iPhone-8' || true)
 
 if [ -z "$HAS_CREATED_SIM" ]; then
   echo 'creating simulator'

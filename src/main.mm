@@ -1,10 +1,23 @@
 #include <iostream>
-#import <UIKit/UIKit.h>
-#import <GLKit/GLKit.h>
-#import <QuartzCore/QuartzCore.h>
+#include "util/stats.h"
+#include <UIKit/UIKit.h>
+#include <GLKit/GLKit.h>
+#include <QuartzCore/QuartzCore.h>
+
+@interface MainWindow : UIWindow
+@end
+
+@implementation MainWindow
+- (UIView *) hitTest: (CGPoint) point withEvent: (UIEvent *) event {
+    UIView *res;
+    res = [super hitTest: point withEvent: event];
+    std::cout << "TOUCHY" << std::endl;
+    return res;
+}   
+@end
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, GLKViewDelegate>
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MainWindow *window;
 @end
 
 @implementation AppDelegate{
@@ -21,11 +34,19 @@
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
   #pragma unused(launchOptions)
   #pragma unused(application)
-  self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+  self.window = [[MainWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
   is_increasing = YES;
   red_value = 0.0;
 
   EAGLContext *context = [[EAGLContext alloc] initWithAPI: kEAGLRenderingAPIOpenGLES2];
+
+  if (!context) {
+    std::cout << "Failed to initialize OpenGLES 2.0 context" << std::endl;
+    exit(1);
+  }
+
+  print_stats();
+
   GLKView *view = [[GLKView alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
   view.context = context;
   view.delegate = self;
@@ -40,7 +61,7 @@
   return YES;
 }
 
-- (void) glkView:(GLKView *) view drawInRect: (CGRect) rect {
+- (void) glkView: (GLKView *) view drawInRect: (CGRect) rect {
   #pragma unused(rect)
   #pragma unused(view)
 
@@ -58,7 +79,7 @@
     is_increasing = YES;
   }
 
-  glClearColor(0.0, red_value, 0.0, 1.0);
+  glClearColor(red_value, 0.0, 0.0, 1.0);
   glClear(GL_COLOR_BUFFER_BIT);
 }
 
@@ -83,9 +104,9 @@
 }
 @end
 
-int main(int argc, char * argv[]) {
+int main(int argc, char *argv[]) {
   std::cout << "I think; therefore, ib." << std::endl;
   @autoreleasepool {
-      return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    return UIApplicationMain(argc, argv, nil, @"AppDelegate");
   }
 }
